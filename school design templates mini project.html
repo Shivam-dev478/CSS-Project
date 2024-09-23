@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <title>School Education Templates</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+          position: relative;
+        background-color: #224;
+            color:aqua;
+            font-family: sans-serif;
+        }
+      .slider{
+             position:relative;
+             width:100%;
+             height:100vh;
+             display: flex;
+             align-items: center;
+             text-align: center;
+             justify-content: center;
+             animation-name: bg;
+             animation-duration: 2s;
+             animation-timing-function: ease;
+             animation-iteration-count: infinite;
+      }
+      @keyframes bg {
+        0%,100%{
+           background-color: rgba(0,0,0,0.5);
+        }
+        25%{
+           background-color: rgba(255,0,0,0.5);
+        }
+        50%{
+           background-color: rgba(0,255,0,0.5);
+        }
+        75%{
+           background-color: rgba(0,0,255,0.5);
+        }
+      }
+      .slider-container h1{
+               text-align: center;
+                padding:10px ;
+                margin-bottom: 10px;
+      }
+      .description{
+                    font-size: 30px;
+                    margin:9px ;
+      }
+      .contact{
+                border:1px solid #fff;
+                font-size: 18px;
+                font-weight: bolder;
+                display: inline-block;
+                padding:10px 60px;
+                margin-top: 9px;
+                transition: all 2s ease;
+                cursor: pointer;
+      }
+      .contact:hover{
+             background-color: rgba(192, 174, 177, 0.952);
+             color:rgba(8, 34, 41, 0.308);
+             box-shadow: 1px 1px 10px rgb(163, 136, 214),inset 1px 1px 20px rgba(228, 235, 233, 0.178) ;
+             text-shadow: 1px 1px 10px rgba(8, 34, 41, 0.307), 1px 1px 20px rgba(6, 66, 66, 0.666);
+      }
+      .slider video{
+        position: absolute;
+        top:0;
+        left:0;
+         min-width: 100%;
+         min-height:100%;
+         z-index: -1;
+      }
+    </style>
+    <body>
+        <div class="slider">
+            <video muted autoplay loop>
+    <source src="../Videos/Instagram Reels Education Template After Effect Video AEP Template Free Download - Pikbest.mp4" typ="video.mp4" />
+                </video>
+            <div class="slider-container">
+                <h1>Sant Atulanand Residential Academy School</h1>
+                <p class="description">Global Education with Indian Values</p>
+            <div class="contact">Contact us</div>
+            </div>
+            </div>
+    </body>
+</html>

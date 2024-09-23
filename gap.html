@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <title>Gap in CSS</title>
+    <style>
+        *{
+            margin: 0;
+            bottom: 0;
+        }
+        body{
+            position:relative;
+            width: 100%;
+            height:100vh;
+        }
+        #box{
+            position: relative;
+            
+            
+            display: flex; /*gap attribute is only used when dispaly:flex;*/
+            gap: 10px;
+        }
+        .box1{
+            
+             border:90px solid #223;
+              display: inline;
+              width:100px;  
+        }
+        .box2{
+             border:90px solid #777;
+              display: inline;
+              width:100px;
+            
+        }
+        </style>
+    <body>
+        <div id="box">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            
+            </div>
+        </body>
+</html>
