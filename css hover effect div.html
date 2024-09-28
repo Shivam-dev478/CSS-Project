@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS hover effect on div</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins',sans-serif;
+        background:#224;
+        overflow: scroll;
+    }
+    ::-webkit-scrollbar{
+         width: none;
+         height:none;
+    }
+    .center{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .box{
+          width:250px;
+          height: 250px;
+          padding: 25px;
+     /*     border: 2px solid #224;*/
+          background: transparent;
+          z-index:1;
+          /*border-radius: 5px;*/
+          transition: 0.5s;
+    }
+    .box:before{
+          content: '';
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background: linear-gradient(90deg,black,blueviolet,blue);
+            width:0;
+            height:0;
+            transition: 0.5s;
+            z-index:-1;
+    }
+    .box h1{
+         font-size: 18px;
+         transition: 0.5s;
+    }
+    .box p{
+         transition:0.5s;
+    }
+    .box:hover:before{
+           width: 830%;
+           height: 830%;
+          box-shadow: 10px 10px 10px -1px rgba(0,255,0,0.5),
+                     inset -10px -10px 10px -1px rgba(0,255,0,0.80);
+                    /* overflow: scroll; */   
+    }
+    
+    .box:hover h1,.box:hover p{
+          color:#ebeef1;
+       
+    }
+</style>
+<body>
+    <div class="center">
+        <div class="box">
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod in dolore odio ratione aliquam obcaecati cumque adipisci quasi eius, animi enim voluptatum earum consectetur deleniti nemo possimus accusantium veritatis eum.
+           </p>
+ </div>
+ </div>
+</body>
+</html>

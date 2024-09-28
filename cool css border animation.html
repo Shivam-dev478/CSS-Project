@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cool CSS Border Animation</title>
+</head>
+<style>
+    body{
+        margin:0;
+        padding:0;
+        font-family: 'POPPINS',sans-serif;
+        font-weight: bold;
+        font-size: 80px;
+        background:black ;
+  }
+  .center{
+        position: absolute;
+        /*width:100%;
+        height:100%;*/
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+  }
+  a{
+    text-decoration: none;
+     border:12px dotted transparent;
+     border-width: 1px;
+    /* display: inline-block;*/
+     width:100px;
+     height: 50px;
+     padding: 2px;
+     margin: 20px;
+     margin-right: .001rem;
+     background: linear-gradient(90deg,blue,blueviolet,pink);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     box-shadow: 10px 10px 10px -1px rgba(10,69,234,0.5),-10px -10px 10px -1px rgba(244,244,244,0.68);
+  }
+  a:before{
+    content:'';
+    position: absolute;
+    top:-2px;
+    left:0;
+    /*width: 100%;
+    height: 100%;*/
+    width: 0;
+    height:0;
+    background: #9078f9 transparent;
+     border:12px dotted transparent;
+}
+a:hover:before{
+    animation-name: animate_1;
+     animation-duration: 1s;
+     animation-timing-function: ease;
+     animation-fill-mode: backwards;
+}
+@keyframes animate_1 {
+    0%{
+        width:0%;
+        height:0%;
+        border-top-color:#225;
+        border-right-color:transparent;
+        border-bottom-color:transparent;
+        border-left-color:transparent;
+    }
+     50%{
+        width:100%;
+        height:0%;
+        border-top-color:#225;
+        border-right-color:transparent;
+        border-bottom-color:transparent;
+        border-left-color:transparent;
+    }
+    70%{
+          width:100%;
+          height:100%;
+          border-top-color:#225;
+        border-right-color:#225;
+        border-bottom-color:transparent;
+        border-left-color:transparent;
+    }
+    90%{
+          width:100%;
+          height:100%;
+          border-top-color:#225;
+        border-right-color:#225;
+        border-bottom-color:#225;
+        border-left-color:transparent;
+    }
+    100%{
+          width:100%;
+          height:100%;
+          border-top-color:#225;
+        border-right-color:#225;
+        border-bottom-color:#225;
+        border-left-color:#225;
+    }
+}
+
+</style>
+<body>
+    <div class="center">
+        <a href="#">COOL</a>
+    </div>
+</body>
+</html>

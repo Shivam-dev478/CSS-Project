@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS hover effect body</title>
+</head>
+<style>
+    
+    body{
+       /* position: absolute;*/
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins',sans-serif;
+        background: #224;
+        animation-name: bg;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+    }
+    @keyframes bg {
+            0%{
+                background:yellow;
+                opacity: 0.5;
+            }
+            50%{
+                background:orangered;
+                opacity: 0.5;
+            }
+            75%{
+                background: goldenrod;
+                opacity: 0.5;
+            }
+            100%{
+                background:blue;
+                opacity: 0.5;
+            }
+    }
+    .center{
+         position: absolute;
+         top:50%;
+         left: 50%;
+         transform: translate(-50%,-50%);
+         /*background: linear-gradient(90deg,blue,blueviolet,violet);*/
+    }
+    .box{
+         width: 250px;
+         height:250px;
+         padding:25px;
+         z-index: 1;
+         transition: 0.5s;
+         background: transparent;
+}
+.box:before{
+    content:'';
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+       background: linear-gradient(90deg,blue,blueviolet,violet);
+      width:0;
+      height:0;
+      z-index: -1;
+      transition: 0.5s;
+      animation-name: box;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+}
+.box:hover:before{
+    width:800%;
+    height:800%;
+}
+.box h1{
+    font-size: 50px;
+      transition:0.5s;
+      /*display: inline-block;*/
+      
+}
+.box:hover h1{
+    color:#ebeef1;
+   background: linear-gradient(90deg,blue,blueviolet,violet);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent; 
+        animation-name: header;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+}
+@keyframes box {
+      0%{
+         background: linear-gradient(90deg,yellow,orangered,red);
+         opacity: 0.5;
+      }
+      50%{
+                background:linear-gradient(90deg,pink,blue,blueviolet);
+                opacity: 0.5;
+            }
+            75%{
+                background: linear-gradient(90deg,green,blue,red);
+                opacity: 0.5;
+            }
+            100%{
+                background:linear-gradient(90deg,purple,gray,goldenrod);
+                opacity: 0.5;
+            }
+    
+}
+@keyframes header {
+      0%{
+         background: linear-gradient(90deg,yellow,orangered,red);
+         -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+      }
+      50%{
+                background:linear-gradient(90deg,pink,blue,blueviolet);
+                -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+            }
+            75%{
+                background: linear-gradient(90deg,green,blue,red);
+                -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+            }
+            100%{
+                background:linear-gradient(90deg,purple,gray,goldenrod);
+                -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+            }
+    
+}
+.container video{
+       position:absolute;
+       top:0;
+       left:0;
+       min-width: 100%;
+       min-height: 100%;
+       overflow: hidden;
+       z-index: -1;
+       background-position: center;
+
+}
+
+</style>
+<body>
+    
+        <div class="container">
+      <video src="Shivam/ram navami.mp4" autoplay muted loop></video>
+    <div class="center">
+        <div class="box">
+            <h1>Jai Shree Raam!</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
