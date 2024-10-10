@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Rotating Animated Image</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       /* background: #225;*/
+    }
+    .lineargradient{
+    /*    background: linear-gradient(orange,goldenrod,#ff33);*/
+        min-width: 700px;
+        min-height: 700px;
+        animation: gradient 3s linear infinite alternate-reverse;
+    }
+    @keyframes gradient {
+               0%{
+                   background: linear-gradient(orange,goldenrod,#ff33);
+               }
+               50%{
+                   background: linear-gradient(30deg,red,blue,green);
+               }
+               75%{
+                   background: linear-gradient(45deg,green,lightgreen,lightseagreen);
+               }
+               100%{
+                  background: linear-gradient(60deg,lime,green,limegreen);
+               }
+    }
+    .container{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width:400px;
+        height:400px;
+    }
+    .circle1{
+          width: 100%;
+          height: 100%;
+          border:6px solid #00ffff;
+          border-color: #00ffff #00ffff transparent transparent;
+          border-radius: 200px;
+          animation: animatecircle1 7s linear infinite;
+    }
+    .circle2{
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          width: calc(100% - 40px);
+          height: calc(100% - 40px);
+          border:6px solid #00ff00;
+          border-color: #00ff00 transparent transparent transparent;
+          border-radius: 200px;
+          animation: animatecircle2 5s linear infinite;
+    }
+    .circle3{
+          position: absolute;
+          top: 40px;
+          left: 40px;         
+           width: calc(100% - 90px);
+          height: calc(100% - 90px);
+          border:6px solid blueviolet;
+          border-color: transparent transparent transparent transparent;
+          border-radius: 200px;
+          background-image: url(Shivam/shri\ ram\ hanumaan\ milan.jfif);
+          background-size: cover;
+          animation: animatecircle3 2s  infinite;
+    }
+    .circle3:hover{
+          cursor: pointer;
+          animation-play-state: paused;
+    }
+    @keyframes animatecircle1 {
+            0%{
+                transform: rotate(0deg);
+            }
+          100%{
+             transform: rotate(360deg);
+          }
+    }
+    @keyframes animatecircle2 {
+            0%{
+                transform: rotate(0deg);
+            }
+          100%{
+             transform: rotate(360deg);
+          }
+    }
+    @keyframes animatecircle3 {
+            0%{
+                transform: rotate(0deg);
+            }
+          100%{
+             transform: rotate(360deg);
+          }
+    }
+</style>
+<body>
+    <div class="lineargradient">
+    <div class="container">
+        <div class="circle1"></div>
+            <div class="circle2"></div>
+                <div class="circle3"></div>
+                </div>
+    </div>
+</body>
+</html>

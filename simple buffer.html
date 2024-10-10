@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Buffer</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 100vh;
+         background: blueviolet;
+    }
+    .circle{
+          border:6px solid #0000f7;
+          border-color: #00ffff violet violet violet;
+          width: 200px; 
+          height: 200px;        
+          border-radius: 200px; 
+          animation: animatecircle 2s linear infinite;
+    }
+    @keyframes animatecircle {
+        0%{   
+             transform: rotate(0deg);
+              
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="circle"></div>
+    </div>
+</body>
+</html>

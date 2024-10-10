@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Text Image</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 100px;
+        font-family: 'Lato',sans-serif;
+        font-weight: bolder;
+        background: url(Shivam/beautiful\ nature.jfif);
+        background-size: cover;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .text{
+        background: url(Shivam/mountain\ landscape.jfif);
+       /* width: 60px;
+        height: 60px;*/
+        background-size: cover;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: animatedtext 3s linear infinite;
+        transition: all 2s linear;
+    }
+    .text:after{
+        transition: transform 1000ms;
+    }
+    .text:hover{
+         transform: translateY(-0.75rem);
+         transition: transform 2000ms;
+         text-shadow: 1px 1px 1px #fff,
+                      2px 2px 2px #fff,
+                      3px 3px 3px goldenrod,
+                      4px 4px 4px goldenrod,
+                      5px 5px 5px goldenrod,
+                      6px 6px 6px goldenrod,
+                      7px 7px 7px goldenrod,
+                      8px 8px 8px goldenrod;
+         cursor: pointer;
+    }
+    @keyframes animatedtext {
+        0%{
+            background-position: 100% 100%;
+        }
+        50%{
+            background-position: 100% 0;
+        }
+        100%{
+            background-position: 100% 100%;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="text">Textarea</div>
+    </div>
+</body>
+</html>

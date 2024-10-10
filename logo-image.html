@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Circular image</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        background: #224;
+        box-sizing: border-box;
+    }
+    .center{
+        position: absolute;
+        top: 30%;
+        left:40%;
+        width:300px;
+        height: 300px;
+     /*   background: #224;*/
+    }
+    .circle1{
+         width: 100%;
+         height: 100%;
+         border: 6px solid #fff;
+         border-color: red blue orange green;
+         border-radius: 200px;
+         animation: animatecircle1 2s linear infinite;
+    }
+    .circle2{
+        position: absolute;
+        top:18px;
+        left:18px;
+         width: calc(100% - 40px);
+         height: calc(100% - 40px);
+         border: 6px dashed #fff;
+         border-radius: 200px;
+         /*background-image: url(Shivam/shri\ ram\ hanumaan\ milan.jfif);
+         background-size: cover;*/
+         animation: animatecircle2 2s linear infinite;
+    }
+    .circle3{
+        position: absolute;
+        top:18px;
+        left:18px;
+         width: calc(100% - 40px);
+         height: calc(100% - 40px);
+         border: 6px dashed #fff;
+         border-radius: 150px;
+         background-image: url(Shivam/shri\ ram\ hanumaan\ milan.jfif);
+         background-size: cover;
+        /* transform: scaleX(-1);
+         /*animation: animatecircle2 2s linear infinite;*/
+    }
+    @keyframes animatecircle1 {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes animatecircle2 {
+        0%{
+            transform: rotate(360deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
+</style>
+<body>
+    <div class="center">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+    </div>
+</body>
+</html>
