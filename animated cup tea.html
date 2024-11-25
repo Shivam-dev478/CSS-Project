@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Animated Cup Tea</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        background: brown;
+    }
+    .cup{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 200px;
+        height: 200px;
+        background: #ffa;
+        border-bottom-left-radius: 30%;
+        border-bottom-right-radius: 30%;
+
+    }
+    .cup:before{
+         content: '';
+         position: absolute;
+         top:0;
+         left: 0;
+         background: #3a0009;
+         border: 2px solid #ffa;
+         height: 30px;
+         width: 100%;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transform: translateY(-16px);
+}
+.cup:after{
+      content: '';
+      position: absolute;
+      height: 90px;
+      width: 80px;
+      background: transparent;
+      border-radius: 50%;
+      border: 20px solid #ffa;
+      top:40%;
+      left: 150px;
+      transform: translateY(-60px);
+}
+.plate{
+    position: absolute;
+    
+    top: 100.01%;
+    left: 0;
+    height:30px;
+    width:250px;
+    background: #ffa;
+    border: 2px solid #ffa;
+    box-sizing: border-box;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+  /*  border-top-left-radius: 40%;
+    border-top-right-radius: 40%;*/
+    transform: translateX(-20px);
+}
+ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -90px;
+    transform: translateX(10%);
+    width: 100%;
+ /*   display: flex;
+    align-items: center;
+    justify-content: center;*/
+}
+ul li{
+    list-style: none;
+    width: 2px;
+    height: 40px;
+    background: #ffa;
+    margin: 15px;
+    float: left;
+   
+ /*   transform: translateX(-75.50px);*/
+    animation: vapour 2s linear infinite;
+}
+@keyframes vapour {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(3px);
+
+    }
+    100%{
+        transform: translateY(-75px);
+        opacity: 0;
+        filter: blur(3px);
+    }
+}
+ul li:nth-child(1){
+    animation-delay: 0.3s;
+}
+ul li:nth-child(2){
+    animation-delay: 0s;
+}
+ul li:nth-child(3){
+    animation-delay: 0s;
+}
+ul li:nth-child(4){
+    animation-delay: 0s;
+}
+ul li:nth-child(5){
+    animation-delay: 0.6s;
+}
+</style>
+<body>
+    <div class="cup">
+    <div class="plate"></div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    </div>
+</body>
+</html>
