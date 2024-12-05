@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    background: #221;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.wavy_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* font-size: 12em; */
+    /* letter-spacing: 2px; */
+    /* color: azure; */
+}
+
+.wavy_container span {
+    font-size: 70px;
+    letter-spacing: 10px;
+    color: azure;
+    /* -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 0, 0, 0.16)); */
+    animation: upsdown 1s ease-in-out infinite;
+}
+
+@keyframes upsdown {
+    0% {
+        transform: translateY(0);
+        -webkit-box-reflect: below -12px linear-gradient(transparent, rgba(0, 255, 0, 0.16));
+        text-shadow: 0 0 5px #ebeef1,
+            0 0 10px #ebeef1,
+            0 0 20px #0f0;
+        color: cyan;
+    }
+
+    50% {
+        transform: translateY(-1.0rem);
+        /* transform: translateY(3.87rem); */
+        -webkit-box-reflect: above -12px linear-gradient(transparent, rgba(255, 0, 0, 0.16));
+        text-shadow: 0 0 5px #ebeef1,
+            0 0 10px #ebeef1,
+            0 0 20px #f00;
+        color: lawngreen;
+        /* text-transform: uppercase; */
+    }
+
+    100% {
+        transform: translateY(1.0rem);
+        -webkit-box-reflect: left -12px linear-gradient(transparent, rgba(0, 0, 255, 0.16));
+        text-shadow: 0 0 5px #ebeef1,
+            0 0 10px #ebeef1,
+            0 0 20px #00f;
+        color: corals;
+        text-transform: uppercase;
+    }
+}
+
+.wavy_container span:nth-child(1) {
+    animation-delay: 0.2s;
+    text-transform: uppercase;
+}
+
+.wavy_container span:nth-child(2) {
+    animation-delay: 0.4s;
+    text-transform: uppercase;
+    /* transition: transform 275ms; */
+}
+
+.wavy_container span:nth-child(3) {
+    animation-delay: 0.6s;
+    text-transform: uppercase;
+}
+
+.wavy_container span:nth-child(4) {
+    animation-delay: 0.8s;
+    text-transform: uppercase;
+}
+
+.wavy_container span:nth-child(5) {
+    animation-delay: 1.4s;
+    text-transform: uppercase;
+}
+
+.wavy_container span:nth-child(6) {
+    margin-left: 20px;
+    /* word-spacing: 100px; */
+    animation-delay: 0.2s;
+    text-transform: uppercase;
+
+}
+
+.wavy_container span:nth-child(7) {
+    /* margin-left: 20px; */
+    animation-delay: 0.4s;
+    text-transform: uppercase;
+
+}
+
+.wavy_container span:nth-child(8) {
+    /* margin-left: 20px; */
+    animation-delay: 0.6s;
+    text-transform: uppercase;
+
+}
+
+.wavy_container span:nth-child(9) {
+    /* margin-left: 20px; */
+    animation-delay: 0.7s;
+    text-transform: uppercase;
+
+}
+
+.wavy_container span:nth-child(10) {
+    /* margin-left: 20px; */
+    animation-delay: 0.8s;
+    text-transform: uppercase;
+
+}
+
+.wavy_container span:nth-child(11) {
+    /* margin-left: 20px; */
+    animation-delay: 0.9s;
+    text-transform: uppercase;
+
+}
+
+.wavy_container span:nth-child(12) {
+    /* margin-left: 20px; */
+    animation-delay: 1.4s;
+    text-transform: uppercase;
+
+}
